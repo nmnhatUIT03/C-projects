@@ -1,1 +1,1 @@
-# Object Oriented Programing Works.
+# Object Oriented Programming Works.
