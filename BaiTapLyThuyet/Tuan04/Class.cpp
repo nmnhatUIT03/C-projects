@@ -97,12 +97,12 @@ class SVDaiHoc: public SinhVien{
 int main(){
     SVCaoDang svCD;
     SVDaiHoc svDH;
-    svDH.nhap();
     svCD.nhap();
+    svDH.nhap();    
+    svCD.xuat();
+    svCD.xetTN(); 
     svDH.xuat();
     svDH.xetTN();
-    svCD.xuat();
-    svCD.xetTN();
     return 0;
 }
 
