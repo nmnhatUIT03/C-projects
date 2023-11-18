@@ -11,7 +11,12 @@ public:
         phut = 0;
         giay = 0;
     }
-    friend istream& operator>>(istream &is, CThoiGian &tg){
+    friend istream& operator>>(istream &is, CThoiGian &tg);
+
+    friend ostream& operator<<(ostream &os, CThoiGian &tg);
+
+};
+istream& operator>>(istream &is, CThoiGian &tg){
         cout << "Nhap gio: ";
         is >> tg.gio;
         cout << "Nhap phut: ";
@@ -21,14 +26,12 @@ public:
         return is;
     }
 
-    friend ostream& operator<<(ostream &os, CThoiGian &tg){
+ostream& operator<<(ostream &os, CThoiGian &tg){
         os << "Gio: " << tg.gio << '\n';
         os << "Phut: " << tg.phut << '\n';
         os << "Giay: " << tg.giay << '\n';
         return os;
     }
-
-};
 
 int main(){
     CThoiGian a;

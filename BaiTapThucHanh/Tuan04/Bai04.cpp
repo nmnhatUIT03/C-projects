@@ -11,7 +11,12 @@ public:
         nguyen = 0;
         thuc = 0.0;
     }
-    friend istream& operator>>(istream &is, CHonSo &h){
+    friend istream& operator>>(istream &is, CHonSo &h);
+
+    friend ostream& operator<<(ostream &os, CHonSo &h);
+
+};
+istream& operator>>(istream &is, CHonSo &h){
         cout << "Nhap nguyen: ";
         is >> h.nguyen;
         cout << "Nhap thuc: ";
@@ -19,13 +24,11 @@ public:
         return is;
     }
 
-    friend ostream& operator<<(ostream &os, CHonSo &h){
+ostream& operator<<(ostream &os, CHonSo &h){
         os << "Nguyen: " << h.nguyen << '\n';
         os << "Thuc: " << h.thuc << '\n';
         return os;
     }
-
-};
 
 int main(){
     CHonSo a;

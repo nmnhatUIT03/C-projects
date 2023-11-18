@@ -13,7 +13,11 @@ class CDiem{
             van = 0.0;
             anh = 0.0;
         }
-        friend istream& operator>>(istream &is, CDiem &d){
+        friend istream& operator>>(istream &is, CDiem &d);
+        friend ostream& operator<<(ostream &os, CDiem &d);
+
+};
+istream& operator>>(istream &is, CDiem &d){
             cout << "Nhap diem toan: ";
             is >> d.toan;
             cout << "Nhap diem anh: ";
@@ -23,15 +27,12 @@ class CDiem{
             return is;
         }
 
-        friend ostream& operator<<(ostream &os, CDiem &d){
+ostream& operator<<(ostream &os, CDiem &d){
             os << "Điểm anh: " << d.anh << '\n';
             os << "Điểm toán: " << d.toan << '\n';
             os << "Điểm văn: " << d.van << '\n';
             return os;
         }
-
-};
-
 int main(){
     CDiem a;
     cin >> a;

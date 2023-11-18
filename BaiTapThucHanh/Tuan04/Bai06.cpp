@@ -11,7 +11,13 @@ public:
         thang = 0;
         nam = 0;
     }
-    friend istream& operator>>(istream &is, CNgayThangNam &ntn){
+    friend istream& operator>>(istream &is, CNgayThangNam &ntn);
+
+    friend ostream& operator<<(ostream &os, CNgayThangNam &ntn);
+
+};
+
+istream& operator>>(istream &is, CNgayThangNam &ntn){
         cout << "Nhap ngay: ";
         is >> ntn.ngay;
         cout << "Nhap thang: ";
@@ -21,16 +27,12 @@ public:
         return is;
     }
 
-    friend ostream& operator<<(ostream &os, CNgayThangNam &ntn){
+ostream& operator<<(ostream &os, CNgayThangNam &ntn){
         os << "Ngay: " << ntn.ngay << '\n';
         os << "Thang: " << ntn.thang << '\n';
         os << "Nam: " << ntn.nam << '\n';
         return os;
     }
-
-};
-
-
 int main(){
     CNgayThangNam a;
     cin >> a;

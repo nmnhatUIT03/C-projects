@@ -10,7 +10,11 @@ public:
         tu = 0;
         mau = 1;
     }
-    friend istream& operator>>(istream &is, CPhanSo &p){
+    friend istream& operator>>(istream &is, CPhanSo &p);
+
+    friend ostream& operator<<(ostream &os, CPhanSo &p);
+};
+istream& operator>>(istream &is, CPhanSo &p){
         cout << "Nhap tu: ";
         is >> p.tu;
         cout << "Nhap mau: ";
@@ -18,13 +22,11 @@ public:
         return is;
     }
 
-    friend ostream& operator<<(ostream &os, CPhanSo &p){
+ostream& operator<<(ostream &os, CPhanSo &p){
         os << "Tu: " << p.tu << '\n';
         os << "Mau: " << p.mau << '\n';
         return os;
     }
-
-};
 
 int main(){
     CPhanSo a;

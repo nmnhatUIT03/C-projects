@@ -13,7 +13,12 @@ public:
         y = 0.0;
         z = 0.0;
     }
-    friend istream& operator>>(istream &is, CDiemKhongGian &d){
+    friend istream& operator>>(istream &is, CDiemKhongGian &d);
+
+    friend ostream& operator<<(ostream &os, CDiemKhongGian &d);
+
+};
+istream& operator>>(istream &is, CDiemKhongGian &d){
         cout << "Nhap x: ";
         is >> d.x;
         cout << "Nhap y: ";
@@ -23,14 +28,12 @@ public:
         return is;
     }
 
-    friend ostream& operator<<(ostream &os, CDiemKhongGian &d){
+ostream& operator<<(ostream &os, CDiemKhongGian &d){
         os << "x: " << d.x << '\n';
         os << "y: " << d.y << '\n';
         os << "z: " << d.z << '\n';
         return os;
     }
-
-};
 
 
 int main(){
