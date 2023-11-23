@@ -11,7 +11,8 @@ public:
         n = 0;
         a = NULL;
     }
-    friend istream& operator>>(istream &is, CMangDong &md){
+    friend istream& operator>>(istream &is, CMangDong &md)
+    {
         cout << "Nhap n: ";
         is >> md.n;
         md.a = new int[md.n];
